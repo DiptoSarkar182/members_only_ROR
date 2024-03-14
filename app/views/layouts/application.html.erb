@@ -11,6 +11,29 @@
   </head>
 
   <body>
+  <nav class='navbar'>
+    <div class='brand'>
+      <h1><%= link_to 'Members Only', root_path %></h1>
+    </div>
+    <%if !user_signed_in? %>
+      <div class="account-buttons">
+        <%= button_to "Log In", new_user_session_url, method: "get" %>
+        <%= button_to "Sign Up", new_user_registration_url, method: "get" %>
+      </div>
+    <% else %>
+      <div class="account-buttons">
+        <%= button_to "Log Out", destroy_user_session_url, method: "delete" %>
+      </div>
+    <% end %>
+  </nav>
+  <% if alert || notice %>
+    <div class="alerts-and-notices">
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+    </div>
+  <% end %>
+  <div class="content">
     <%= yield %>
+  </div>
   </body>
 </html>
