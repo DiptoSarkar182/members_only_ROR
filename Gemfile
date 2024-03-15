@@ -69,3 +69,5 @@ end
 gem "devise", "~> 4.9"
 
 gem "bcrypt", "~> 3.1"
+
+gem "tailwindcss-rails", "~> 2.3"
