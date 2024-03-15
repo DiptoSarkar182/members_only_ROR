@@ -31,6 +31,7 @@
           </p>
           <%= button_to "Log Out", destroy_user_session_url, method: "delete", class: "px-4 py-2 bg-red-600 text-white rounded hover:bg-red-700" %>
           <%= link_to "Create new secret", new_secret_path, class: "px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700" %>
+          <%= link_to "Edit Account", edit_user_registration_path, class: "px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700" %>
         </div>
       <% end %>
     </div>
