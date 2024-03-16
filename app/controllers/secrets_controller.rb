@@ -9,7 +9,6 @@ class SecretsController < ApplicationController
   end
 
   def create
-    @secrets = Secret.all.order('created_at DESC')
     @secret = current_user.secrets.build(secret_params)
 
     respond_to do |format|
