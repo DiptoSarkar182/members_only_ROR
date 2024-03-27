@@ -12,7 +12,11 @@ class User < ApplicationRecord
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user |
       user.provider = auth.provider
       # user.name = auth.info.name
-      user.username = auth.info.nickname
+      if auth.provider == 'github'
+        user.username = auth.info.nickname
+      elsif auth.provider == 'google_oauth2'
+        user.username = auth.info.name
+      end
       user.uid = auth.uid
       user.email = auth.info.email
       user.password = Devise.friendly_token[0,20]

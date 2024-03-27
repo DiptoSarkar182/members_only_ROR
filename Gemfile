@@ -75,4 +75,5 @@ gem "tailwindcss-rails", "~> 2.3"
 gem 'omniauth'
 gem 'omniauth-github'
 gem 'omniauth-rails_csrf_protection'
+gem 'omniauth-google-oauth2'
 
