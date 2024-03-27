@@ -1,3 +1,4 @@
+gem 'dotenv', groups: [:development, :test]
 source "https://rubygems.org"
 
 ruby "3.2.3"
@@ -71,3 +72,7 @@ gem "devise", "~> 4.9"
 gem "bcrypt", "~> 3.1"
 
 gem "tailwindcss-rails", "~> 2.3"
+gem 'omniauth'
+gem 'omniauth-github'
+gem 'omniauth-rails_csrf_protection'
+
