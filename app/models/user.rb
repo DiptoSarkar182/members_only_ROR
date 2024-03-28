@@ -15,11 +15,12 @@ class User < ApplicationRecord
       if auth.provider == 'github'
         user.username = auth.info.nickname
       elsif auth.provider == 'google_oauth2'
-        user.username = auth.info.name
+        user.username = auth.info.email.split('@').first
       end
       user.uid = auth.uid
       user.email = auth.info.email
       user.password = Devise.friendly_token[0,20]
     end
   end
+
 end
