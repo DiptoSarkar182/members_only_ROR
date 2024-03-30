@@ -24,8 +24,13 @@
   <%= link_to "Didn't receive unlock instructions?", new_unlock_path(resource_name) %><br />
 <% end %>
 
+<%#- if devise_mapping.omniauthable? %>
+  <%#- resource_class.omniauth_providers.each do |provider| %>
+<!--    <%#= button_to "Sign in with #{OmniAuth::Utils.camelize(provider)}", omniauth_authorize_path(resource_name, provider), data: { turbo: false }, class: "bg-gray-800 text-white font-bold py-2 px-4 rounded-md hover:bg-gray-700" %><br />-->
+  <%# end %>
 <%- if devise_mapping.omniauthable? %>
   <%- resource_class.omniauth_providers.each do |provider| %>
-    <%= button_to "Sign in with #{OmniAuth::Utils.camelize(provider)}", omniauth_authorize_path(resource_name, provider), data: { turbo: false }, class: "bg-gray-800 text-white font-bold py-2 px-4 rounded-md hover:bg-gray-700" %><br />
+    <% provider_name = provider == :google_oauth2 ? 'Google' : OmniAuth::Utils.camelize(provider) %>
+    <%= button_to "Sign in with #{provider_name}", omniauth_authorize_path(resource_name, provider), data: { turbo: false }, class: "bg-gray-800 text-white font-bold py-2 px-4 rounded-md hover:bg-gray-700" %><br />
   <% end %>
 <% end %>
