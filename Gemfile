@@ -76,4 +76,5 @@ gem 'omniauth'
 gem 'omniauth-github'
 gem 'omniauth-rails_csrf_protection'
 gem 'omniauth-google-oauth2'
+gem "letter_opener", group: :development
 
