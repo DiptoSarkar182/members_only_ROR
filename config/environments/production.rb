@@ -97,4 +97,14 @@ Rails.application.configure do
   # config.host_authorization = { exclude: ->(request) { request.path == "/up" } }
   # config.action_mailer.default_url_options = { :host => 'yourapp.com' }
   # config.action_mailer.default_url_options = { :host => 'https://members-only-ror.onrender.com/' }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address: 'smtp.elasticemail.com',
+    port: 2525, # or 587
+    domain: 'gmail.com',
+    user_name: ENV['elastic_mail_username'],
+    password: ENV['elastic_mail_password'],
+    authentication: 'login',
+    enable_starttls_auto: true
+  }
 end

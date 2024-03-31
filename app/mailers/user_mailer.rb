@@ -1,9 +1,9 @@
 class UserMailer < ApplicationMailer
-  default from: 'members-only@supports.com'
+  default from: 'diptosarkarhridoy@gmail.com'
 
   def welcome_email
     @user = params[:user]
-    @url  = 'http://127.0.0.1:3000/users/sign_in'
+    @url  = 'https://members-only-ror.onrender.com/'
     mail(to: @user.email, subject: 'Welcome to My Awesome Site')
   end
 end
