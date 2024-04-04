@@ -13,9 +13,10 @@ class SecretsController < ApplicationController
 
     respond_to do |format|
       if @secret.save
+        # format.html { redirect_to root_path, notice: "Secret was successfully created." }
+        ActionCable.server.broadcast('secret', @secret.as_json(include: :user))
         format.html { redirect_to root_path, notice: "Secret was successfully created." }
       else
-
         format.html { render 'new', status: :unprocessable_entity }
       end
     end
