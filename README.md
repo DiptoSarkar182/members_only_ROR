@@ -17,7 +17,7 @@ Please note that the app is hosted on a free tier and may take a moment to load 
 - Users can sign up, log in, and log out.
 - Only logged in users can create posts.
 - Only logged in users can see the authors of posts.
-- Real-time updates of posts using Action Cable.
+- Real-time updates of posts using Action Cable. **Only for posting secrets.**
 
 ## Getting Started
 
