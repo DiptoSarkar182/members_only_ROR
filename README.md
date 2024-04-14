@@ -13,7 +13,7 @@ Please note that the app is hosted on a free tier and may take a moment to load 
 
 ## Features
 
-- User authentication system, built with Devise.
+- User authentication system, built with Devise. Github and google sign in.
 - Users can sign up, log in, and log out.
 - Only logged in users can create posts.
 - Only logged in users can see the authors of posts.
@@ -29,7 +29,7 @@ You need to have Ruby and Rails installed on your machine. See [this guide](http
 
 ### Installing
 
-1. Clone the repository: `git clone https://github.com/DiptoSarkar182/members_only_ROR`
+1. Clone the repository: `git clone https://github.com/DiptoSarkar182/members_only_ROR.git`
 2. Navigate into the project directory: `cd members-only`
 3. Install the dependencies: `bundle install`
 4. Set up the database: `rails db:create db:migrate`
