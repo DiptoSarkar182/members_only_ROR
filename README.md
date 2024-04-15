@@ -19,6 +19,11 @@ Please note that the app is hosted on a free tier and may take a moment to load 
 - Only logged in users can see the authors of posts.
 - Real-time updates of posts using Action Cable. **Only for posting secrets.**
 
+## Screenshots
+
+![SS1](./app/assets/images/ss1.PNG)
+![SS2](./app/assets/images/ss2.PNG)
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
