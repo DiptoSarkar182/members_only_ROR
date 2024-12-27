@@ -41,8 +41,8 @@ RUN chmod +x bin/* && \
 RUN SECRET_KEY_BASE_DUMMY=1 ./bin/rails assets:precompile
 
 # Integrate the commands from render-build.sh
-RUN bundle exec rails assets:clean && \
-    bundle exec rails db:migrate
+RUN SECRET_KEY_BASE_DUMMY=1 bundle exec rails assets:clean && \
+    SECRET_KEY_BASE_DUMMY=1 bundle exec rails db:migrate
 
 # Final stage for app image
 FROM base
