@@ -67,6 +67,5 @@ USER 1000:1000
 # Entrypoint prepares the database (assumes bin/docker-entrypoint exists)
 ENTRYPOINT ["/rails/bin/docker-entrypoint"]
 
-# Expose port 3001 to match Kamal deploy.yml
 EXPOSE 3001
 CMD ["./bin/rails", "server", "-b", "0.0.0.0", "-p", "3001"]
