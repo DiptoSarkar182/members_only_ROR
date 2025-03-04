@@ -30,8 +30,8 @@ COPY . .
 RUN bundle exec bootsnap precompile app/ lib/
 
 # Compile Tailwind CSS and then precompile assets
-RUN bundle exec rails tailwindcss:build && \
-    ./bin/rails assets:clean && \
+RUN SECRET_KEY_BASE_DUMMY=1 bundle exec rails tailwindcss:build && \
+    SECRET_KEY_BASE_DUMMY=1 ./bin/rails assets:clean && \
     SECRET_KEY_BASE_DUMMY=1 ./bin/rails assets:precompile
 
 FROM base
